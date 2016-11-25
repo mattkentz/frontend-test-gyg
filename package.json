@@ -8,8 +8,8 @@
   },
   "scripts": {
     "build": "npm run clean && npm run build:dev && npm run build:prod && http-server -p 8999",
-    "build:dev": "webpack src/index.js dist/getyourguide.js --config config/webpack.config.dev.js",
-    "build:prod": "webpack src/index.js dist/getyourguide.js --config config/webpack.config.prd.js",
+    "build:dev": "webpack --progress --colors src/index.js dist/getyourguide.js --config config/webpack.config.dev.js",
+    "build:prod": "webpack --progress --colors src/index.js dist/getyourguide.js --config config/webpack.config.prd.js",
     "prepublish": "npm run build",
     "clean": "rimraf dist build",
     "lint": "eslint src",
