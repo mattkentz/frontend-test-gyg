@@ -39,3 +39,4 @@ jspm_packages
 /atlassian-ide-plugin.xml
 /dist/
 dist/
+/.idea/vcs.xml
