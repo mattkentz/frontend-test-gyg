@@ -1,0 +1,51 @@
+{
+  "name": "getyourguide-test",
+  "version": "1.0.0",
+  "description": "A development test given to Frontend Engineers",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mattkentz/getyourguide-test"
+  },
+  "scripts": {
+    "build": "npm run clean && npm run build:dev && npm run build:prod",
+    "build:dev": "webpack src/index.js dist/getyourguide.js --config config/webpack.config.dev.js",
+    "build:prod": "webpack src/index.js dist/getyourguide.js --config config/webpack.config.prd.js",
+    "prepublish": "npm run build",
+    "clean": "rimraf dist build",
+    "lint": "eslint src",
+    "test": "karma start --single-run --no-auto-watch config/karma.config.js"
+  },
+  "author": "Matthias Kentzia",
+  "license": "MIT",
+  "devDependencies": {
+    "autoprefixer": "^6.5.3",
+    "autoprefixer-loader": "^3.2.0",
+    "babel-core": "^6.18.2",
+    "babel-eslint": "^7.1.1",
+    "babel-istanbul": "^0.11.0",
+    "babel-istanbul-loader": "^0.1.0",
+    "babel-loader": "^6.2.8",
+    "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-preset-es2015": "^6.18.0",
+    "css-loader": "^0.26.0",
+    "eslint": "^3.10.2",
+    "eslint-config-airbnb": "^13.0.0",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "file-loader": "^0.9.0",
+    "jasmine-core": "^2.5.2",
+    "karma": "^1.3.0",
+    "karma-chrome-launcher": "^2.0.0",
+    "karma-coverage": "^1.1.1",
+    "karma-jasmine": "^1.0.2",
+    "karma-sourcemap-loader": "^0.3.7",
+    "karma-webpack": "^1.8.0",
+    "loader-utils": "^0.2.16",
+    "node-sass": "^3.13.0",
+    "postcss-loader": "^1.1.1",
+    "rimraf": "^2.5.4",
+    "sass-loader": "^4.0.2",
+    "style-loader": "^0.13.1",
+    "url-loader": "^0.5.7",
+    "webpack": "^1.13.3"
+  }
+}
