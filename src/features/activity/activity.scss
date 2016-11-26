@@ -5,14 +5,20 @@
 	background-color: $color__branding;
 	background-size: cover;
 	background-position: 50% 50%;
-	height: 30vh;
+	height: 100%;
 	display: flex;
 	align-items: center;
 	padding: 2em;
 }
 
 .activity__text {
-	color: white;
+	color: $color__branding--pop;
 	text-shadow: 0.1em 0.1em 0.4em #000000;
 }
 
+.activity__pill {
+	background-color: $color__branding;
+	color: $color__branding--pop;
+	border-radius: 0.1em;
+	padding: 0.5em;
+}

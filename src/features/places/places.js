@@ -1,9 +1,12 @@
+import './places.scss';
+
 const places = {
 	mapPlacesToDOM: mapPlacesToDOM
 };
 
 function mapPlacesToDOM(id, places) {
 	let section = document.getElementById(id);
+	section.className = 'places';
 	section.innerHTML = '<h2>Nearby Points of Interest</h2>';
 	places.forEach( place => {
 		section.appendChild(_createPlaceTemplate(place))

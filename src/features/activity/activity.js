@@ -1,4 +1,5 @@
 import './activity.scss';
+import '../../styles/layout.scss';
 
 const activity = {
 	mapActivityToDOM: mapActivityToDOM
@@ -10,13 +11,14 @@ function mapActivityToDOM(id, activity) {
 	section.appendChild(_createActivityTemplate(activity));
 }
 
-function _createActivityTemplate(activity) {
+function _createActivityTemplate(activity, pill = 'GetYourGuide') {
 	let activityElem = document.createElement('div');
-	activityElem.className = 'activity';
+	activityElem.className = 'activity flex__direction--column';
 	activityElem.style.backgroundImage =`url('${activity.activityPictureUrl}')`;
 	let capitalizedName = activity.customerFirstName.charAt(0).toUpperCase() + activity.customerFirstName.slice(1);
 	activityElem.innerHTML =
 		`
+		<h3 class="activity__pill">${pill}</h3>
 		<h2 class="activity__text">${capitalizedName} is currently ${_randomPhraseGenerator()} ${activity.activityTitle}</h2>
 		`;
 	return activityElem;

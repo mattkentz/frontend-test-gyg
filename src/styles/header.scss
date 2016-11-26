@@ -1,0 +1,7 @@
+@import "./colors";
+
+.app__header {
+	background-color: $color__branding;
+	color: $color__branding--pop;
+	height: 40vh;
+}

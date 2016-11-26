@@ -1,10 +1,15 @@
+//Styles
+import '../node_modules/normalize.css/normalize.css';
+import './styles/global.scss';
+import './styles/header.scss';
+import './styles/content.scss';
+
+//Components
 import map from './features/map/map';
 import customer from './features/customer/customer';
 import places from './features/places/places';
 import activity from './features/activity/activity';
 import updates from './features/updates/updates';
-import './styles/global.scss';
-import '../node_modules/normalize.css/normalize.css';
 
 getAppData();
 setInterval(getAppData, 60000)
