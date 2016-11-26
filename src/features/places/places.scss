@@ -3,6 +3,7 @@
 @import "../../styles/breakpoints";
 
 .places {
+	box-sizing: border-box;
 	padding: $spacing__inner;
 	height:30vh;
 }
