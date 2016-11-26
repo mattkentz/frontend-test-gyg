@@ -1,5 +1,6 @@
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
+
 module.exports = {
 	module: {
 		loaders: [
@@ -41,6 +42,7 @@ module.exports = {
 		],
 	},
 	plugins: [
+		new ExtractTextPlugin('styles.css'),
 	],
 	output: {
 		libraryTarget: 'umd',

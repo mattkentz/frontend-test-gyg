@@ -19,6 +19,12 @@ module.exports = function (config) {
 			'tests.webpack.js': ['webpack', 'sourcemap'],
 		},
 		reporters: ['progress', 'coverage'],
+
+		coverageReporter: {
+			type : 'html',
+			dir : '../coverage/'
+		},
+
 		webpack: {
 			cache: true,
 			devtool: 'inline-source-map',
