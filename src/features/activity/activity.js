@@ -13,7 +13,7 @@ function mapActivityToDOM(id, activity) {
 
 function _createActivityTemplate(activity, pill = 'GetYourGuide') {
 	let activityElem = document.createElement('div');
-	activityElem.className = 'activity flex__direction--column';
+	activityElem.className = 'activity flex__container flex__centerContent flex__direction--column';
 	activityElem.style.backgroundImage =`url('${activity.activityPictureUrl}')`;
 	let capitalizedName = activity.customerFirstName.charAt(0).toUpperCase() + activity.customerFirstName.slice(1);
 	activityElem.innerHTML =

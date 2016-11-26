@@ -16,8 +16,8 @@ function mapPlacesToDOM(id, places) {
 }
 
 function scrollPlaces(elem, duration) {
-	elem.scrollTop = 0.0;
-	let step = elem.scrollHeight / duration / 20;
+	elem.scrollTop = 0;
+	let step = Math.ceil(elem.scrollHeight / duration / 20);
 	let counter = 0;
 	let scrollInterval = setInterval(() => {
 		if(counter === duration * 20) {

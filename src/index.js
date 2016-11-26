@@ -12,11 +12,11 @@ import activity from './features/activity/activity';
 import updates from './features/updates/updates';
 
 getAppData();
-setInterval(getAppData, 60000)
+setInterval(getAppData, 120000)
 
 function getAppData() {
 	customer.fetchData().then(function (data) {
-		activity.mapActivityToDOM('activity',data);
+		activity.mapActivityToDOM('header',data);
 		let customerMap = map.init(
 			{
 				lat: data.activityCoordinateLatitude,
@@ -25,7 +25,7 @@ function getAppData() {
 		map.placeMarker(customerMap, data.activityCoordinateLatitude, data.activityCoordinateLongitude)
 		map.getNearbyPlaces(customerMap, data.activityCoordinateLatitude, data.activityCoordinateLongitude).then(function (response) {
 			let placesElem = places.mapPlacesToDOM('places-list', response);
-			places.scrollPlaces(placesElem, 60);
+			places.scrollPlaces(placesElem, 120);
 		});
 
 		updates.mapUpdatesToDOM('updates', new Date());
