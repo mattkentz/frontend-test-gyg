@@ -1,0 +1,19 @@
+@import "./typography";
+@import "./colors";
+
+
+body {
+	font-family: $font__family--default;
+}
+
+h1 {
+	font-size: $font__size--headings;
+}
+
+h2 {
+	font-size: $font__size--subheadings;
+}
+
+h3 {
+	font-size: $font__size--large;
+}

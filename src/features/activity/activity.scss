@@ -1,4 +1,16 @@
-.activity__picture {
-	width: 100px;
-	height: 60px;
+.activity {
+	box-sizing: border-box;
+	background-color: orange;
+	background-size: cover;
+	background-position: 50% 50%;
+	height: 30vh;
+	display: flex;
+	align-items: center;
+	padding: 2em;
 }
+
+.activity__text {
+	color: white;
+	text-shadow: 0.1em 0.1em 0.4em #000000;
+}
+
