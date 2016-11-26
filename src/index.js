@@ -1,9 +1,11 @@
 import map from './features/map/map';
 import customer from './features/customer/customer';
 import places from './features/places/places';
+import activity from './features/activity/activity';
 import './styles/global.scss'
 
 customer.fetchData().then(function (data) {
+	activity.mapActivityToDOM('activity',data);
 	let customerMap = map.init(
 		{
 			lat: data.activityCoordinateLatitude,
