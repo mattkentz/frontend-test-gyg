@@ -1,7 +1,8 @@
 (function(){
 	window.google = window.google || {
 			maps: {
-				Map: function(){}
+				Map: function(){},
+				Marker: function () {}
 			}
 		};
 })();

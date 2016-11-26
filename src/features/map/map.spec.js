@@ -29,5 +29,24 @@ describe('Map - ', function () {
 				}
 			);
 		});
+	});
+
+	describe('place function', function () {
+
+		beforeEach(function () {
+			spyOn(window.google.maps, 'Marker');
+		});
+
+		it('should create place a market on the map', function () {
+			let mapObj = {
+				coordinates: [23, 45]
+			};
+			map.placeMarker(mapObj, 25, 30)
+			expect(window.google.maps.Marker).toHaveBeenCalledWith({
+					position: {lat: 25, lng: 30},
+					map: mapObj
+				}
+			);
+		});
 	})
 })
