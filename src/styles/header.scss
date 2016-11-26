@@ -1,7 +1,18 @@
 @import "./colors";
+@import "./breakpoints";
 
 .app__header {
 	background-color: $color__branding;
 	color: $color__branding--pop;
-	height: 40vh;
+	height:30vh;
+}
+
+@media (min-width: $breakpoint__small) {
+	.app__header {
+		background-color: $color__branding;
+		color: $color__branding--pop;
+		height: 40vh;
+	}
+
+
 }

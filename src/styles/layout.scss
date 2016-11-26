@@ -1,3 +1,5 @@
+@import "./breakpoints";
+
 .flex__container {
 	display: flex;
 }
@@ -12,4 +14,14 @@
 	flex-direction: column;
 }
 
+.flex__list {
+	flex-direction: column;
+}
+
 $spacing__inner: 1em;
+
+@media (min-width: $breakpoint__small) {
+	.flex__list {
+		flex-direction: row;
+	}
+}

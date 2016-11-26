@@ -1,4 +1,6 @@
 @import "../../styles/colors.scss";
+@import "../../styles/breakpoints.scss";
+@import "../../styles/typography";
 
 .activity {
 	box-sizing: border-box;
@@ -15,6 +17,7 @@
 .activity__text {
 	color: $color__branding--pop;
 	text-shadow: 0.1em 0.1em 0.4em #000000;
+	font-size: $font__size--large;
 }
 
 .activity__pill {
@@ -22,4 +25,10 @@
 	color: $color__branding--pop;
 	border-radius: 0.1em;
 	padding: 0.5em;
+}
+
+@media (min-width: $breakpoint__small) {
+	.activity__text {
+		font-size: $font__size--headings;
+	}
 }
