@@ -2,6 +2,7 @@ import map from './features/map/map';
 import customer from './features/customer/customer';
 import places from './features/places/places';
 import activity from './features/activity/activity';
+import updates from './features/updates/updates';
 import './styles/global.scss';
 import '../node_modules/normalize.css/normalize.css';
 
@@ -20,5 +21,6 @@ function getAppData() {
 		map.getNearbyPlaces(customerMap, data.activityCoordinateLatitude, data.activityCoordinateLongitude).then(function (response) {
 			places.mapPlacesToDOM('places', response);
 		})
+		updates.mapUpdatesToDOM('updates', new Date());
 	});
 }
