@@ -6,13 +6,16 @@
 	<link rel="stylesheet" href="dist/styles.css">
 </head>
 <body>
-	<header class="flex__container flex__centerContent">
+	<header class="flex__container flex__centerContent app__header">
 		<section id="activity"></section>
 	</header>
 
 	<section id="content" class="content flex__container">
 		<div id="map"></div>
-		<section id="places"></section>
+		<section id="places" class="flex__container flex__direction--column places">
+			<h2>Nearby Points of Interest</h2>
+			<div id="places-list" class="places__list flex__container flex__direction--column flex__centerContent"></div>
+		</section>
 	</section>
 
 	<footer>

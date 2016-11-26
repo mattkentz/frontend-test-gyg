@@ -4,10 +4,12 @@
 
 .flex__centerContent {
 	align-content: center;
+	align-items: center;
 	justify-content: center;
-	text-align: center;
 }
 
 .flex__direction--column {
 	flex-direction: column;
 }
+
+$spacing__inner: 1em;

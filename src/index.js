@@ -24,8 +24,10 @@ function getAppData() {
 			}, 18);
 		map.placeMarker(customerMap, data.activityCoordinateLatitude, data.activityCoordinateLongitude)
 		map.getNearbyPlaces(customerMap, data.activityCoordinateLatitude, data.activityCoordinateLongitude).then(function (response) {
-			places.mapPlacesToDOM('places', response);
-		})
+			let placesElem = places.mapPlacesToDOM('places-list', response);
+			places.scrollPlaces(placesElem, 60);
+		});
+
 		updates.mapUpdatesToDOM('updates', new Date());
 	});
 }
