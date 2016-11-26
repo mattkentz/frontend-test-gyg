@@ -3,7 +3,7 @@ const customer = {
 };
 
 function fetchData() {
-	if (self.fetch) {
+	if (false) {
 		return fetch('https://www.getyourguide.com/touring.json?key=2Gr0p7z96D')
 			.then(
 				function (response) {
@@ -19,6 +19,19 @@ function fetchData() {
 			}
 		);
 	} else {
+		return new Promise(function (resolve, reject) {
+			var xhr = new XMLHttpRequest();
+			xhr.open('GET', 'https://www.getyourguide.com/touring.json?key=2Gr0p7z96D');
+			xhr.onload = function() {
+				if (xhr.status == 200) {
+					resolve(JSON.parse(xhr.response));
+				}
+				else {
+					reject('An error has occurred: ' + xhr.status);
+				}
+			};
+			xhr.send();
+		})
 
 	}
 }
