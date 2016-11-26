@@ -14,7 +14,7 @@ import updates from './features/updates/updates';
 // Initialize default map before call to GetYourGuide in case call takes long or returns error
 map.init();
 getAppData();
-setInterval(getAppData, 60000)
+//setInterval(getAppData, 60000)
 
 function getAppData() {
 	customer.fetchData().then(function (data) {
