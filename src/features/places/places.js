@@ -15,9 +15,14 @@ function mapPlacesToDOM(id, places) {
 	return section;
 }
 
+// Adjust scroll speed depending on size of list and duration between calls
 function scrollPlaces(elem, duration) {
 	elem.scrollTop = 0;
-	let step = Math.ceil(elem.scrollHeight / duration / 20);
+	let adjustedDuration = duration * 20;
+	let step;
+	elem.scrollHeight > adjustedDuration ? step =
+		Math.floor(elem.scrollHeight / duration / 20) :
+		Math.ceil(elem.scrollHeight / duration / 20)
 	let counter = 0;
 	let scrollInterval = setInterval(() => {
 		if(counter === duration * 20) {
