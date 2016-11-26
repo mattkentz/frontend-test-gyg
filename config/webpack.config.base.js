@@ -9,7 +9,7 @@ module.exports = {
 				loader: 'babel',
 			},
 			{
-				test: /\.scss$/,
+				test: /\.(css|scss)$/,
 				loader: ExtractTextPlugin.extract('style', 'css!autoprefixer!sass')
 			},
 

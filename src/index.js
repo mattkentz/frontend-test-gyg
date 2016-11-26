@@ -3,6 +3,7 @@ import customer from './features/customer/customer';
 import places from './features/places/places';
 import activity from './features/activity/activity';
 import './styles/global.scss';
+import '../node_modules/normalize.css/normalize.css';
 
 getAppData();
 setInterval(getAppData, 60000)

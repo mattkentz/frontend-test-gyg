@@ -1,6 +1,8 @@
+@import "../../styles/colors.scss";
+
 .activity {
 	box-sizing: border-box;
-	background-color: orange;
+	background-color: $color__branding;
 	background-size: cover;
 	background-position: 50% 50%;
 	height: 30vh;
