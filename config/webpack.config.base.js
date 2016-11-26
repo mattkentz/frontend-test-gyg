@@ -41,7 +41,6 @@ module.exports = {
 		],
 	},
 	plugins: [
-		new ExtractTextPlugin('styles.css')
 	],
 	output: {
 		libraryTarget: 'umd',

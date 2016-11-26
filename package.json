@@ -8,8 +8,8 @@
   },
   "scripts": {
     "build": "npm run clean && npm run build:dev && npm run build:prod && http-server -p 8999",
-    "build:dev": "webpack --progress --colors src/index.js dist/getyourguide.js --config config/webpack.config.dev.js",
-    "build:prod": "webpack --progress --colors src/index.js dist/getyourguide.js --config config/webpack.config.prd.js",
+    "build:dev": "webpack --progress --colors src/index.js dist/main.js --config config/webpack.config.dev.js",
+    "build:prod": "webpack --progress --colors --config config/webpack.config.prd.js",
     "prepublish": "npm run build",
     "clean": "rimraf dist build",
     "lint": "eslint src",
@@ -32,7 +32,9 @@
     "eslint-config-airbnb": "^13.0.0",
     "extract-text-webpack-plugin": "^1.0.1",
     "file-loader": "^0.9.0",
+    "html-webpack-plugin": "^2.24.1",
     "http-server": "^0.9.0",
+    "inline-manifest-webpack-plugin": "^3.0.1",
     "jasmine-core": "^2.5.2",
     "karma": "^1.3.0",
     "karma-chrome-launcher": "^2.0.0",
@@ -47,7 +49,9 @@
     "sass-loader": "^4.0.2",
     "style-loader": "^0.13.1",
     "url-loader": "^0.5.7",
-    "webpack": "^1.13.3"
+    "webpack": "^1.13.3",
+    "webpack-manifest-plugin": "^1.1.0",
+    "webpack-md5-hash": "0.0.5"
   },
   "dependencies": {
     "normalize.css": "^5.0.0"
