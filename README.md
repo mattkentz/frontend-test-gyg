@@ -5,7 +5,7 @@ A development test given to Frontend Engineers.
 - Open the zip file or clone the git repo
 - From the project root folder, run the following in the terminal:
 	- `npm install` to install dependencies
-	- `npm run build` to build the project and start the http-server
+	- `npm run build` to build the project and start the http-server - app can now be accessed on the address shown in the terminal
 	- `npm run test` to run the Unit Tests
 	- `npm run build:dev` to build the project with unminified code
 	- `npm run build:prod` to build the production version of the project
@@ -32,10 +32,10 @@ in the `coverage` directory. I did not add more tests so I could focus on adding
 	* Customer name and activity are added to the header including a dynamic message to join them together
 	* Activity image is added as background for header
 * Map
-	* Added map using the Google Map API
+	* Added map using the Google Maps API
 	* On customer retrieval marker is added to the map to show customer location
 * Nearby POI
-	* Nearby points of interest are retrieved using the Google Map / Places API
+	* Nearby points of interest are retrieved using the Google Maps / Places API
 	* Since user cannot interact, list of POIs is scrolled automatically
 	* Last updated time
 

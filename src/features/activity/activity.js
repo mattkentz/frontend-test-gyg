@@ -19,7 +19,7 @@ function _createActivityTemplate(activity, pill = 'GetYourGuide') {
 	activityElem.innerHTML =
 		`
 		<h3 class="activity__pill">${pill}</h3>
-		<h1 class="activity__text">${capitalizedName} is currently ${_randomPhraseGenerator()} ${activity.activityTitle}</h1>
+		<h1 class="activity__text">${capitalizedName} is ${_randomPhraseGenerator()} ${activity.activityTitle}</h1>
 		`;
 	return activityElem;
 }
