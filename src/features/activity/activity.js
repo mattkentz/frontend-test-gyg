@@ -6,6 +6,7 @@ const activity = {
 
 function mapActivityToDOM(id, activity) {
 	let section = document.getElementById(id);
+	section.innerHTML = '';
 	section.appendChild(_createActivityElement(activity));
 }
 

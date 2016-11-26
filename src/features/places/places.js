@@ -4,6 +4,7 @@ const places = {
 
 function mapPlacesToDOM(id, places) {
 	let section = document.getElementById(id);
+	section.innerHTML = '';
 	places.forEach( place => {
 		section.appendChild(_createPlaceElement(place))
 	});
