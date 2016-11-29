@@ -3,7 +3,7 @@ const customer = {
 };
 
 function fetchData() {
-	if (false) {
+	if (self.fetch) {
 		return fetch('https://www.getyourguide.com/touring.json?key=2Gr0p7z96D')
 			.then(
 				function (response) {
